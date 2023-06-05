@@ -1,0 +1,24 @@
+import React from 'react'
+import Login from './Login';
+import Signup from './Signup'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './Home';
+import View from './View';
+import UpdateUser from './UpdateUser';
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login />}></Route>
+        <Route path='/signup' element={<Signup />}></Route>
+        <Route path='/home' element={<Home />}></Route>
+        <Route path='/view/:id' element={<View />}></Route>
+        <Route path='/update/:id' element={<UpdateUser />}></Route>
+      </Routes>
+    </BrowserRouter>
+
+  )
+}
+
+export default App;
